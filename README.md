@@ -10,6 +10,13 @@ API 서버가 현재 정상 동작하지 않아, 실제 호출 대신 Mock 데�
 - MUI(Material UI) 컴포넌트
 - Axios (Mock 데이터 사용)
 
+## 개발 환경
+- Node.js: 20.11.0
+- React: 19.2.0
+- IDE: Visual Studio Code
+- 브라우저: Chrome 142
+
+
 ## 프로젝트 진행 일정
 
 | 날짜       | 시간대             | 작업 내용                                                         | 기술/라이브러리       | 상태/비고                                           |
@@ -18,7 +25,6 @@ API 서버가 현재 정상 동작하지 않아, 실제 호출 대신 Mock 데�
 | 2025-11-26 (화) | 낮~오후          | Dashboard UI 제작, CardSummary 컴포넌트 추가, TransactionTable 연동, Mock 데이터 적용 | React, MUI       | GitHub push 완료, 서버 API 오류로 Mock 데이터 사용 |
 | 2025-11-27 (수) | 밤 12시~새벽 2시  | Dashboard Grid item 수정, TransactionTable 스타일 조정, VS Code 경고 해결 | React, MUI       | 서버 오류로 Mock 데이터 계속 사용                  |
 | 2025-11-28 (목) | 밤 12시~새벽 2시  | 남은 컴포넌트 스타일/레이아웃 점검, Mock 데이터 기반 기능 확인, GitHub push | React, MUI       | UI/UX 최종 점검                                   |
-| 2025-11-29 (금) | 오후~13시 제출    | 최종 코드, README, GitHub 저장소 확인 및 제출                          | Git, GitHub      | 제출용 이메일: recruit@brunchpayments.com, 레포지토리 제출 완료 |
 
 
 ## 구현 페이지
@@ -28,8 +34,7 @@ API 서버가 현재 정상 동작하지 않아, 실제 호출 대신 Mock 데�
 2. **거래 내역 리스트 화면**
    - 거래 ID, 가맹점, 금액, 상태, 날짜 표 형태로 표시
    - TransactionTable 컴포넌트 사용
-3. **추가 페이지**
-   - 과제 요구사항 외 페이지는 MockUp 페이지로 구성
+
 
 ## Mock 데이터
 ```ts
@@ -66,9 +71,16 @@ npm run dev
 ```
 4.**브라우저 접속**
 ```bash
-[npm install](http://localhost:5173
+http://localhost:5173
 )
 ```
+
+## 11/30 수정 사항 (기한 이후 업데이트)
+- useEffect 관련 로직 일부 수정
+- env 파일 위치 및 환경 설정 재조정
+- 해당 내용은 깃허브 `post-deadline-fix` 브랜치에 커밋 완료
+
+
 현재 API 서버 문제로 실제 데이터 호출은 실패하며, Mock 데이터를 기반으로 UI/UX를 확인할 수 있습니다.
 
 
