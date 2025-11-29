@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import CardSummary from "../components/CardSummary";
-// import { getTransactions } from "../api/transactions";
+import { getTransactions } from "../api/transactions";
 import type { Transaction } from "../types/transaction";
-import { mockTransactions } from "../mock/transactions";
+// import { mockTransactions } from "../mock/transactions";
 
 const Dashboard = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
   useEffect(() => {
-    // getTransactions().then(setTransactions);
+  getTransactions().then((data) => {
+    console.log("API 데이터:", data);  // 여기를 확인!
+    setTransactions(data);
+  });
+}, []);
+
+
+ /* useEffect(() => {
+    getTransactions().then(setTransactions);
     // 실제 API 대신 mock 데이터 사용
-    setTransactions(mockTransactions);
+    // setTransactions(mockTransactions);
   }, []);
+  */
 
   const totalAmount = transactions.reduce((sum, t) => sum + t.amount, 0);
 
